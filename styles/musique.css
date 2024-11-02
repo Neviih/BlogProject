@@ -1,0 +1,182 @@
+body {
+    background-color: antiquewhite;
+}
+
+header {
+    text-align: center;
+    font-size: xx-large;
+    background-color: rgb(255, 255, 255);
+    padding: 8%;
+}
+
+
+/*-----------------------------------------------------*/
+/*-------------------- ARTISTE FAV --------------------*/
+.bloc-fav-container {
+    background-color: rgb(170, 170, 170);
+    padding: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.artiste-fav-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.artiste-fav-container h2{
+    font-size: xx-large;
+}
+
+.artiste-fav-container h3{
+    font-size: xx-large;
+}
+
+.artiste-fav-container p{
+    width: 800px;
+    text-align: justify;
+}
+
+.txt-img-container {
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.txt-img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+}
+
+
+/*------------------------------------------------------------*/
+/*-------------------- ALBUMS ARTISTE FAV --------------------*/
+
+.carousel {
+    width: 60%;
+    margin: 15px auto;
+    background-color: #ffffff;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: justify;
+}
+
+.album-item {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+
+    padding: 10px;
+}
+
+.album-img-container{
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+}
+
+.album-item img {
+    width: 100%;
+    height: auto;
+}
+
+.album-item h1 {
+    text-align: center;
+}
+
+.album-text {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+
+    width: 85%;
+    text-align: justify;
+}
+
+/*------------------------------------------------------------*/
+/*--------------------- AUTRES ARTISTES ---------------------*/
+
+.artistes-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.artistes-item-container {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.artistes-item-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.artistes-item-container:hover img {
+    transform: scale(1.25);
+}
+
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.artistes-item-container:hover .overlay {
+    opacity: 1;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 500px;
+    z-index: 1000;
+}
+
+.popup-content {
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
